@@ -1,3 +1,4 @@
 .vscode
 build
-PicoLed
+pico_neopixels
+.env
