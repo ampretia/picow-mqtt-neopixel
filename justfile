@@ -10,10 +10,18 @@ CWDIR := justfile_directory()
 _default:
   @just -f {{justfile()}} --list
 
+# To get the neopixel library
+# git clone "https://github.com/martinkooij/pi-pico-adafruit-neopixels"
+# cp -r ./pi-pico-adafruit-neopixels/pico_neopixels .
+# rm -rf ./pi-pico-adafruit-neopixels
+# Edit the cmake file as per the readme in this repo.
+
+
 # Build the code and pull down the idemix tool
 setup:
     #!/bin/bash
     set -ex
+
 
     git submodule update --init --recursive
 
